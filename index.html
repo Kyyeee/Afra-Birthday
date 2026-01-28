@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎉 AFRA BIRTHDAY SPECIAL 🎉</title>
+<title>🎉 AFRA BIRTHDAY 🎉</title>
 <style>
 * {margin:0;padding:0;box-sizing:border-box;}
 body {
@@ -26,6 +26,30 @@ body {
   color: #d63384;
   animation: fadeIn 2s ease-in;
   cursor: pointer;
+}
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,0.8);
+  box-shadow: 
+    0 0 30px rgba(255,64,129,0.6),
+    inset 0 0 20px rgba(255,255,255,0.3);
+  animation: float 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes glowPulse {
+  from { box-shadow: 0 0 30px rgba(255,64,129,0.6), inset 0 0 20px rgba(255,255,255,0.3); }
+  to { box-shadow: 0 0 50px rgba(255,80,130,0.8), inset 0 0 30px rgba(255,255,255,0.4); }
 }
 h1 {
   font-size: clamp(4rem, 15vw, 9rem);
@@ -130,6 +154,7 @@ h1 {
   to {opacity: 1;}
 }
 @media (max-width: 768px) {
+  .profile-pic { width: 140px; height: 140px; }
   .card {font-size: 1.1rem; padding: 30px 20px;}
   h1 {font-size: 6rem;}
 }
@@ -137,10 +162,12 @@ h1 {
 </head>
 <body>
 <div class="content" onclick="openCard()">
+  <!-- GANTI URL FOTO INI DENGAN FOTO AFRA -->
+  <img src="https://via.placeholder.com/180x180/ff9a9e/fff?text=AFRA" alt="Afra" class="profile-pic">
   <h1>HAPPY</h1>
   <h1>BIRTHDAY</h1>
   <div class="date" id="date"></div>
-  <button class="btn">🎁 Buka Kartu Kejutan! 🎁</button>
+  <button class="btn">🎁 Buka disinii sayaangg 🎁</button>
 </div>
 
 <div class="card-modal" id="cardModal">
@@ -163,7 +190,7 @@ sekali lagii selamatt ulang tahunn cantikkk🎈🎂🎈
 
 <script>
 let i = 0;
-const date = "2 FEBRUARY 18 Tahun 🎂";
+const date = "2 FEBRUARY 🎂";
 function typeDate() {
   if (i < date.length) {
     document.getElementById("date").innerHTML += date.charAt(i);
@@ -197,7 +224,6 @@ function launchHearts() {
   }
 }
 
-// Close card on outside click
 window.onclick = function(event) {
   const modal = document.getElementById("cardModal");
   if (event.target == modal) closeCard();
