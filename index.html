@@ -1,123 +1,213 @@
+KODE LENGKAP: KARTO UCAPAN AFRA BIRTHDAY + PESAN CINTA
+
+text
+1. https://github.com/Kyyeee/Afra-Birthday → index.html → ✏️ Edit
+2. Ctrl+A → Delete → Paste KODE INI:
+xml
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎉 AFRA BIRTHDAY 🎉</title>
+<title>🎉 AFRA BIRTHDAY SPECIAL 🎉</title>
 <style>
 * {margin:0;padding:0;box-sizing:border-box;}
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 12s ease infinite;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   overflow: hidden;
 }
 @keyframes gradientBG {
-  0% {background-position: 0% 50%;}
+  0%, 100% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
 }
 .content {
   text-align: center;
-  color: white;
+  color: #d63384;
   animation: fadeIn 2s ease-in;
+  cursor: pointer;
 }
 h1 {
-  font-size: clamp(3rem, 12vw, 8rem);
-  margin: 0;
-  background: linear-gradient(45deg, #fff, #ffd700);
+  font-size: clamp(4rem, 15vw, 9rem);
+  margin: 0 0 20px 0;
+  background: linear-gradient(45deg, #ff4081, #f50057, #c51162);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 30px rgba(255,64,129,0.5);
 }
 @keyframes glow {
-  from {text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffd700;}
-  to {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffd700;}
+  from {filter: drop-shadow(0 0 10px #ff4081);}
+  to {filter: drop-shadow(0 0 25px #f50057);}
 }
 .date {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: #ffd700;
+  font-size: 2.2rem;
+  margin: 25px 0;
+  color: #ff9800;
+  font-weight: bold;
   animation: slideUp 1s ease-out 1s both;
 }
 @keyframes slideUp {
-  from {opacity: 0; transform: translateY(30px);}
+  from {opacity: 0; transform: translateY(40px);}
   to {opacity: 1; transform: translateY(0);}
 }
 .btn {
-  background: #ff6b9d;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
   color: white;
   border: none;
-  padding: 15px 40px;
-  font-size: 1.2rem;
-  border-radius: 50px;
+  padding: 20px 50px;
+  font-size: 1.4rem;
+  border-radius: 60px;
   cursor: pointer;
-  margin-top: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: all 0.3s;
+  box-shadow: 0 15px 35px rgba(255,87,34,0.4);
+  transition: all 0.4s;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   animation: slideUp 1s ease-out 1.5s both;
 }
 .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-  background: #ff1493;
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 25px 50px rgba(255,87,34,0.6);
+}
+.card-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  animation: modalSlide 0.5s ease-out;
+}
+@keyframes modalSlide {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+.card {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  animation: cardOpen 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes cardOpen {
+  0% {transform: translate(-50%, -50%) rotateX(90deg) scale(0.7); opacity: 0;}
+  100% {transform: translate(-50%, -50%) rotateX(0deg) scale(1); opacity: 1;}
+}
+.close-card {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+.message {
+  margin-top: 20px;
+  white-space: pre-line;
 }
 .heart {
   position: fixed;
   font-size: 2rem;
   pointer-events: none;
-  z-index: 1000;
-  animation: heartFloat 5s linear forwards;
+  z-index: 999;
+  animation: heartFloat 6s linear forwards;
 }
 @keyframes heartFloat {
   0% {transform: translateY(100vh) rotate(0deg); opacity: 1;}
-  100% {transform: translateY(-100px) rotate(360deg); opacity: 0;}
+  100% {transform: translateY(-100px) rotate(720deg); opacity: 0;}
 }
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+@media (max-width: 768px) {
+  .card {font-size: 1.1rem; padding: 30px 20px;}
+  h1 {font-size: 6rem;}
+}
 </style>
 </head>
 <body>
-<div class="content">
+<div class="content" onclick="openCard()">
   <h1>HAPPY</h1>
   <h1>BIRTHDAY</h1>
   <div class="date" id="date"></div>
-  <button class="btn" onclick="launchHearts()">🎁 KLIK KEJUTAN AFRA 🎁</button>
+  <button class="btn">🎁 Buka Kartu Kejutan! 🎁</button>
+</div>
+
+<div class="card-modal" id="cardModal">
+  <div class="card">
+    <span class="close-card" onclick="closeCard()">✕</span>
+    <h2 style="text-align:center;margin-bottom:20px;font-size:2rem;">💌 UNTUK AFRA 💌</h2>
+    <div class="message">
+HAPPY BIRTHDAYY 🥳🎂🥳 SAYAANGGG 
+selamatt yaa kamuu sudahh 18 tahunn🥳🥳,
+YAYY udahh bukann anakk ncill lagii😚😋. 
+haparan aku buat kamu semoga kamu panjang umurr, 
+sehat selaluu dan di tahun inii kamu dapat menjadi 
+pribadi yang lebih baik lagi yaa sayangg,makinn nurutt 
+sama bunda, dan makin rajin ibadahnyaa. Semoga juga 
+di tahunn inii semuaa impian kamu terkabul yaa sayangg, Aamiin. 
+sekali lagii selamatt ulang tahunn cantikkk🎈🎂🎈
+    </div>
+  </div>
 </div>
 
 <script>
 let i = 0;
-const date = "2 FEBRUARY ❤️";
+const date = "2 FEBRUARY 18 Tahun 🎂";
 function typeDate() {
   if (i < date.length) {
     document.getElementById("date").innerHTML += date.charAt(i);
     i++;
-    setTimeout(typeDate, 150);
+    setTimeout(typeDate, 120);
   }
 }
 typeDate();
 
+function openCard() {
+  document.getElementById("cardModal").style.display = "block";
+  launchHearts();
+}
+
+function closeCard() {
+  document.getElementById("cardModal").style.display = "none";
+}
+
 function launchHearts() {
-  for(let j = 0; j < 30; j++) {
+  for(let j = 0; j < 40; j++) {
     setTimeout(() => {
       const heart = document.createElement("div");
-      heart.innerHTML = ["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+      heart.innerHTML = ["❤️","💖","💕","💗","🥰","😍"][Math.floor(Math.random()*6)];
       heart.className = "heart";
       heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 1 + 1.5) + "rem";
       heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
       document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 7000);
-    }, j * 100);
+      setTimeout(() => heart.remove(), 8000);
+    }, j * 80);
   }
+}
+
+// Close card on outside click
+window.onclick = function(event) {
+  const modal = document.getElementById("cardModal");
+  if (event.target == modal) closeCard();
 }
 </script>
 </body>
 </html>
-"Update index.html"
