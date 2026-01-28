@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎉 AFRA BIRTHDAY 🎉</title>
+<title>🎉 AFRA BIRTHDAY SPECIAL 🎉</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Parisienne&display=swap');
+
 * {margin:0;padding:0;box-sizing:border-box;}
 body {
   background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
@@ -14,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Dancing Script', cursive;
   overflow: hidden;
 }
 @keyframes gradientBG {
@@ -28,10 +30,10 @@ body {
   cursor: pointer;
 }
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   object-fit: cover;
   border: 5px solid rgba(255,255,255,0.8);
   box-shadow: 
@@ -52,23 +54,27 @@ body {
   to { box-shadow: 0 0 50px rgba(255,80,130,0.8), inset 0 0 30px rgba(255,255,255,0.4); }
 }
 h1 {
-  font-size: clamp(4rem, 15vw, 9rem);
-  margin: 0 0 20px 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3rem, 12vw, 6.5rem); /* Dikecilkan dari 9rem */
+  margin: 0 0 15px 0;
   background: linear-gradient(45deg, #ff4081, #f50057, #c51162);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 2s ease-in-out infinite alternate;
   text-shadow: 0 0 30px rgba(255,64,129,0.5);
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 @keyframes glow {
   from {filter: drop-shadow(0 0 10px #ff4081);}
   to {filter: drop-shadow(0 0 25px #f50057);}
 }
 .date {
-  font-size: 2.2rem;
-  margin: 25px 0;
+  font-family: 'Parisienne', cursive;
+  font-size: 1.8rem; /* Dikecilkan dari 2.2rem */
+  margin: 20px 0;
   color: #ff9800;
-  font-weight: bold;
+  font-weight: 400;
   animation: slideUp 1s ease-out 1s both;
 }
 @keyframes slideUp {
@@ -76,16 +82,17 @@ h1 {
   to {opacity: 1; transform: translateY(0);}
 }
 .btn {
+  font-family: 'Dancing Script', cursive;
   background: linear-gradient(45deg, #ff5722, #ff9800);
   color: white;
   border: none;
-  padding: 20px 50px;
-  font-size: 1.4rem;
+  padding: 18px 45px; /* Dikecilkan sedikit */
+  font-size: 1.3rem; /* Dikecilkan dari 1.4rem */
   border-radius: 60px;
   cursor: pointer;
   box-shadow: 0 15px 35px rgba(255,87,34,0.4);
   transition: all 0.4s;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   animation: slideUp 1s ease-out 1.5s both;
@@ -119,7 +126,8 @@ h1 {
   overflow-y: auto;
   box-shadow: 0 30px 80px rgba(0,0,0,0.5);
   color: white;
-  font-size: 1.3rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem; /* Font romantis di card juga */
   line-height: 1.6;
   animation: cardOpen 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -133,6 +141,11 @@ h1 {
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 2.2rem !important;
 }
 .message {
   margin-top: 20px;
@@ -154,9 +167,10 @@ h1 {
   to {opacity: 1;}
 }
 @media (max-width: 768px) {
-  .profile-pic { width: 140px; height: 140px; }
-  .card {font-size: 1.1rem; padding: 30px 20px;}
-  h1 {font-size: 6rem;}
+  .profile-pic { width: 130px; height: 130px; }
+  .card {font-size: 1.2rem; padding: 30px 20px;}
+  h1 {font-size: 4.5rem;}
+  .date {font-size: 1.5rem;}
 }
 </style>
 </head>
@@ -167,13 +181,13 @@ h1 {
   <h1>HAPPY</h1>
   <h1>BIRTHDAY</h1>
   <div class="date" id="date"></div>
-  <button class="btn">🎁 Buka disinii sayaangg 🎁</button>
+  <button class="btn">🎁 Buka Kartu Kejutan! 🎁</button>
 </div>
 
 <div class="card-modal" id="cardModal">
   <div class="card">
     <span class="close-card" onclick="closeCard()">✕</span>
-    <h2 style="text-align:center;margin-bottom:20px;font-size:2rem;">💌 UNTUK AFRA 💌</h2>
+    <h2>💌 UNTUK AFRA 💌</h2>
     <div class="message">
 HAPPY BIRTHDAYY 🥳🎂🥳 SAYAANGGG 
 selamatt yaa kamuu sudahh 18 tahunn🥳🥳,
@@ -190,7 +204,7 @@ sekali lagii selamatt ulang tahunn cantikkk🎈🎂🎈
 
 <script>
 let i = 0;
-const date = "2 FEBRUARY 🎂";
+const date = "2 FEBRUARY 18 Tahun 🎂";
 function typeDate() {
   if (i < date.length) {
     document.getElementById("date").innerHTML += date.charAt(i);
