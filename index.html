@@ -1,182 +1,123 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFRA BIRTHDAY</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: linear-gradient(45deg, #ff6b9d, #c44569, #feca57);
-            background-size: 400% 400%;
-            animation: gradientShift 10s ease infinite;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        #wrapper { 
-            position: relative; 
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            color: white;
-            padding: 20px;
-        }
-        .title h1 { 
-            font-size: clamp(3rem, 10vw, 6rem); 
-            font-weight: 700; 
-            margin: 0 0 20px 0; 
-            font-family: 'Dancing Script', cursive;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .happy { color: #fff; margin-bottom: 10px; }
-        .birthday { color: #ffeb3b; }
-        span { 
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s forwards;
-        }
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .hat { 
-            font-size: 5rem; 
-            margin: 30px 0; 
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
-        }
-        #dob { 
-            font-size: 2rem; 
-            margin: 20px 0; 
-            min-height: 2.5rem;
-        }
-        button { 
-            background: linear-gradient(45deg, #ff9ff3, #f368e0);
-            border: none; 
-            padding: 18px 40px; 
-            font-size: 1.3rem; 
-            border-radius: 50px; 
-            cursor: pointer; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: all 0.3s;
-            color: white;
-            font-weight: 600;
-        }
-        button:hover { transform: scale(1.05); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
-        .hearts { 
-            position: fixed; 
-            top: 0; left: 0; 
-            width: 100%; height: 100%; 
-            pointer-events: none; 
-            z-index: 10;
-        }
-        .heart { 
-            position: absolute; 
-            font-size: clamp(1.5rem, 3vw, 2.5rem); 
-            color: #ff69b4; 
-            animation: float 6s infinite linear; 
-        }
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-        }
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .star {
-            position: absolute;
-            color: #ffd700;
-            font-size: 1.5rem;
-            animation: twinkle 3s infinite;
-        }
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 AFRA BIRTHDAY 🎉</title>
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.content {
+  text-align: center;
+  color: white;
+  animation: fadeIn 2s ease-in;
+}
+h1 {
+  font-size: clamp(3rem, 12vw, 8rem);
+  margin: 0;
+  background: linear-gradient(45deg, #fff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffd700;}
+  to {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffd700;}
+}
+.date {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #ffd700;
+  animation: slideUp 1s ease-out 1s both;
+}
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.btn {
+  background: #ff6b9d;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  animation: slideUp 1s ease-out 1.5s both;
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  background: #ff1493;
+}
+.heart {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 1000;
+  animation: heartFloat 5s linear forwards;
+}
+@keyframes heartFloat {
+  0% {transform: translateY(100vh) rotate(0deg); opacity: 1;}
+  100% {transform: translateY(-100px) rotate(360deg); opacity: 0;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
-    <div id="wrapper">
-        <div class="content">
-            <div class="title">
-                <h1 class="happy">
-                    H<span style="animation-delay: 0.2s">a</span><span style="animation-delay: 0.4s">p</span>
-                    <span style="animation-delay: 0.6s">p</span><span style="animation-delay: 0.8s">y</span>
-                </h1>
-                <h1 class="birthday">
-                    B<span style="animation-delay: 1s">i</span><span style="animation-delay: 1.2s">r</span>
-                    <span style="animation-delay: 1.4s">t</span><span style="animation-delay: 1.6s">h</span>
-                    <span style="animation-delay: 1.8s">d</span><span style="animation-delay: 2s">a</span>
-                    <span style="animation-delay: 2.2s">y</span>
-                </h1>
-            </div>
-            <div class="hat">🎩</div>
-            <div id="dob"></div>
-            <button onclick="showHearts()">Klik untuk Kejutan! ❤️</button>
-        </div>
-        <div class="hearts" id="hearts"></div>
-    </div>
+<div class="content">
+  <h1>HAPPY</h1>
+  <h1>BIRTHDAY</h1>
+  <div class="date" id="date"></div>
+  <button class="btn" onclick="launchHearts()">🎁 KLIK KEJUTAN AFRA 🎁</button>
+</div>
 
-    <script>
-        // Typewriter effect untuk tanggal
-        const dateTxt = "2 February";
-        const dob = document.getElementById('dob');
-        let idx = 0;
-        const interval = setInterval(() => {
-            if (idx < dateTxt.length) {
-                dob.innerHTML += `<span style="animation-delay: ${idx * 0.1}s">${dateTxt[idx]}</span>`;
-                idx++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 120);
+<script>
+let i = 0;
+const date = "2 FEBRUARY ❤️";
+function typeDate() {
+  if (i < date.length) {
+    document.getElementById("date").innerHTML += date.charAt(i);
+    i++;
+    setTimeout(typeDate, 150);
+  }
+}
+typeDate();
 
-        // Buat bintang berkelap-kelip
-        function createStars() {
-            const stars = document.getElementById('stars');
-            for (let i = 0; i < 15; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.innerHTML = '✨';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                stars.appendChild(star);
-            }
-        }
-        createStars();
-
-        // Efek hati beterbangan
-        function showHearts() {
-            const hearts = document.getElementById('hearts');
-            for (let i = 0; i < 25; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.innerHTML = ['❤️', '💖', '💕', '💗'][Math.floor(Math.random() * 4)];
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-                heart.style.animationDelay = Math.random() * 0.5 + 's';
-                hearts.appendChild(heart);
-                setTimeout(() => heart.remove(), 7000);
-            }
-        }
-    </script>
+function launchHearts() {
+  for(let j = 0; j < 30; j++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+      heart.innerHTML = ["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }, j * 100);
+  }
+}
+</script>
 </body>
 </html>
-"Afra Birthday self-contained
+"Update index.html"
